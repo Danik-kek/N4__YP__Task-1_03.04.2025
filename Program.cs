@@ -5,20 +5,16 @@
         static void Main()
         {
 
-            double sum = 0; 
-            int count = 0;  
-            int.TryParse(Console.ReadLine(), out int A);
-
-            while (true)
+            int j = 2;
+            for (int i = 2; i < 32; i = i * 2)
             {
-                count++;                          // Увеличиваем счетчик слагаемых
-                double term = Math.Pow(count, count); // Вычисляем текущее слагаемое n^n
-                sum += term;                      // Добавляем его к сумме
-
-                if (sum > A)                     
-                {break;}
+                while (i < j)
+                {
+                    j = j * 2;
+                }
+                i = j - i;
             }
-                Console.WriteLine($"Количество слагаемых: {count}");
+
         }
     }
 }
